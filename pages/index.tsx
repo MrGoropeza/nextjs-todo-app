@@ -1,4 +1,4 @@
-import Layout from "@/components/layout";
+import AppLayout from "@/components/app-layout";
 import TaskList from "@/components/task-list";
 import TasksProgress from "@/components/task-progress";
 import { getTodayTasks } from "@/lib/tasks";
@@ -8,20 +8,15 @@ export default function Home() {
   const tasks = getTodayTasks();
 
   return (
-    <Layout>
-      <TasksProgress progress={0.3} title="Progreso de hoy"></TasksProgress>
+    <AppLayout title="Inicio" tabID="home">
+      <TasksProgress progress={50} title="Progreso de hoy"></TasksProgress>
+
+      <div className="mb-2 flex items-center justify-between">
+        <h3 className="text-xl font-bold">Tareas de hoy</h3>
+        <Button label="Ver Todas" text severity="info" />
+      </div>
 
       <TaskList tasks={tasks} />
-
-      <div className="absolute bottom-3 left-1/2">
-        <Button
-          rounded
-          icon="pi pi-plus"
-          size="large"
-          tooltip="Crear Tarea"
-          tooltipOptions={{ position: "top" }}
-        ></Button>
-      </div>
-    </Layout>
+    </AppLayout>
   );
 }
