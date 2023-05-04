@@ -8,7 +8,7 @@ export default function Layout({ children }: PropsWithChildren) {
     <main className="relative flex h-full w-full flex-col">
       {/* <Menubar model={items}></Menubar> */}
 
-      <section className="relative grow">{children}</section>
+      <section className="relative grow p-5">{children}</section>
     </main>
   );
 }
