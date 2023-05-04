@@ -27,7 +27,7 @@ export default function TasksProgress({
 }
 
 const progressToPercentage = (progress: number) => {
-  if (progress > 1) return 100;
+  if (progress > 100) return 100;
   if (progress < 0) return 0;
-  return progress * 100;
+  return progress;
 };
