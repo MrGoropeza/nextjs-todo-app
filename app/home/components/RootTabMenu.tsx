@@ -27,21 +27,19 @@ export default function RootTabMenu() {
   ];
 
   return (
-    <nav className="fixed inset-x-0 bottom-0">
-      <div className="relative flex items-center justify-center gap-2 bg-slate-800 pt-2">
-        <div className="absolute bottom-11 mx-auto max-w-max">
-          <Button
-            rounded
-            icon="pi pi-plus"
-            severity="info"
-            size="large"
-            tooltip="Crear Tarea"
-            tooltipOptions={{ position: "top" }}
-          ></Button>
-        </div>
-
-        <TabMenu model={tabs}></TabMenu>
+    <nav className="relative flex items-center justify-center gap-2 bg-slate-800 pt-2">
+      <div className="absolute bottom-11 mx-auto max-w-max">
+        <Button
+          rounded
+          icon="pi pi-plus"
+          severity="info"
+          size="large"
+          tooltip="Crear Tarea"
+          tooltipOptions={{ position: "top" }}
+        ></Button>
       </div>
+
+      <TabMenu model={tabs}></TabMenu>
     </nav>
   );
 }
