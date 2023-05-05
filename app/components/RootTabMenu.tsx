@@ -1,18 +1,22 @@
-import { useRouter } from "next/router";
+"use client";
+
+import { useRouter } from "next/navigation";
 import { Button } from "primereact/button";
 import { MenuItem } from "primereact/menuitem";
 import { TabMenu } from "primereact/tabmenu";
-import { PropsWithoutRef, useState } from "react";
 
-export default function AppTabMenu({
-  tabID,
-}: PropsWithoutRef<{ tabID: string }>) {
+export default function RootTabMenu() {
   const router = useRouter();
   const tabs: MenuItem[] = [
-    { id: "home", icon: "pi pi-home", command: () => router.push("/") },
+    {
+      id: "home",
+      icon: "pi pi-home",
+      command: () => router.push("/"),
+    },
     {
       id: "tasks",
       icon: "pi pi-calendar",
+      url: "/tasks",
       command: () => router.push("/tasks"),
     },
     {
@@ -21,10 +25,6 @@ export default function AppTabMenu({
       command: () => router.push("/settings"),
     },
   ];
-
-  const [activeIndex, setActiveIndex] = useState(
-    tabs.findIndex((tab) => tab.id === tabID)
-  );
 
   return (
     <nav className="fixed inset-x-0 bottom-0">
@@ -40,7 +40,7 @@ export default function AppTabMenu({
           ></Button>
         </div>
 
-        <TabMenu model={tabs} activeIndex={activeIndex}></TabMenu>
+        <TabMenu model={tabs}></TabMenu>
       </div>
     </nav>
   );
