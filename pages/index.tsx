@@ -1,6 +1,4 @@
-import AppLayout from "@/components/app-layout";
-import TaskList from "@/components/task-list";
-import TasksProgress from "@/components/task-progress";
+import { AppLayout, TaskList, TasksProgress } from "@/components";
 import { getTodayTasks } from "@/lib/tasks";
 import { Button } from "primereact/button";
 
