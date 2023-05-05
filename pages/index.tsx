@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <AppLayout title="Inicio" tabID="home">
-      <TasksProgress progress={50} title="Progreso de hoy"></TasksProgress>
+      <TasksProgress progress={50} title="Progreso de hoy" />
 
       <div className="mb-2 flex items-center justify-between">
         <h3 className="text-xl font-bold">Tareas de hoy</h3>
