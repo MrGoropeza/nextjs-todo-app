@@ -13,3 +13,10 @@ export function getTodayTasks(): TaskModel[] {
       description: `${task.description} ${index + 1}`,
     }));
 }
+
+export async function getTodayTasksAsync(): Promise<{ tasks: TaskModel[] }> {
+  const data = await fetch(
+    "https://run.mocky.io/v3/0272767d-8e20-464d-af36-599f7e974de1"
+  );
+  return data.json();
+}

@@ -6,12 +6,12 @@ import "primeicons/primeicons.css";
 import "primereact/resources/primereact.min.css";
 import "primereact/resources/themes/md-dark-indigo/theme.css";
 
-import { getTodayTasks } from "@/lib/tasks";
+import { getTodayTasksAsync } from "@/lib/tasks";
 import { Button } from "primereact/button";
 import { TaskList, TasksProgress } from "./components";
 
-function App() {
-  const tasks = getTodayTasks();
+async function App() {
+  const tasksResponse = await getTodayTasksAsync();
 
   return (
     <>
@@ -22,7 +22,7 @@ function App() {
         <Button label="Ver Todas" text severity="info" />
       </div>
 
-      <TaskList tasks={tasks} />
+      <TaskList tasks={tasksResponse.tasks} />
     </>
   );
 }
