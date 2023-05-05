@@ -1,6 +1,6 @@
 import { TaskModel } from "@/model/task.model";
 import { PropsWithoutRef } from "react";
-import TaskTile from "./task-tile";
+import TaskTile from "./TaskTile";
 
 export default function TaskList({
   tasks,

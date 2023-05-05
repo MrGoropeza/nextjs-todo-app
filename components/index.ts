@@ -1,5 +1,5 @@
-export { default as AppLayout } from "./app-layout";
-export { default as AppTabMenu } from "./app-tabmenu";
-export { default as TaskList } from "./task-list";
-export { default as TasksProgress } from "./task-progress";
-export { default as TaskTile } from "./task-tile";
+export { default as AppLayout } from "./AppLayout";
+export { default as AppTabMenu } from "./AppTabMenu";
+export { default as TaskList } from "./TaskList";
+export { default as TaskTile } from "./TaskTile";
+export { default as TasksProgress } from "./TasksProgress";

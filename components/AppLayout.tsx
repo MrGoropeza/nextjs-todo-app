@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { PropsWithChildren } from "react";
-import AppTabMenu from "./app-tabmenu";
+import AppTabMenu from "./AppTabMenu";
 
 export default function AppLayout({
   children,
