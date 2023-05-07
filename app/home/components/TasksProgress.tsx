@@ -15,10 +15,9 @@ export default function TasksProgress({
         <p>{percentage}%</p>
       </div>
 
-      <div className="relative">
-        <div className="h-2 w-full rounded-lg bg-slate-200/50"></div>
+      <div className="relative h-2 w-full overflow-hidden rounded-lg bg-slate-200/50">
         <div
-          className="absolute top-0 h-2 rounded-lg bg-slate-200"
+          className="absolute h-2 bg-slate-200"
           style={{ width: `${percentage}%` }}
         ></div>
       </div>
