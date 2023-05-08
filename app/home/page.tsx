@@ -8,7 +8,7 @@ import "primereact/resources/themes/md-dark-indigo/theme.css";
 
 import { getTodayTasksAsync } from "@/lib/tasks";
 import { Button } from "primereact/button";
-import { TaskList, TasksProgress } from "./components";
+import { TaskList, TaskModal, TasksProgress } from "./components";
 
 async function App() {
   const tasksResponse = await getTodayTasksAsync();
@@ -23,6 +23,8 @@ async function App() {
       </div>
 
       <TaskList tasks={tasksResponse.tasks} />
+
+      <TaskModal></TaskModal>
     </>
   );
 }

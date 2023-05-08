@@ -1,7 +1,6 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { Button } from "primereact/button";
 import { MenuItem } from "primereact/menuitem";
 import { TabMenu } from "primereact/tabmenu";
 
@@ -27,18 +26,7 @@ export default function RootTabMenu() {
   ];
 
   return (
-    <nav className="relative flex items-center justify-center gap-2 bg-slate-800 pt-2">
-      <div className="absolute bottom-11 mx-auto max-w-max">
-        <Button
-          rounded
-          icon="pi pi-plus"
-          severity="info"
-          size="large"
-          tooltip="Crear Tarea"
-          tooltipOptions={{ position: "top" }}
-        ></Button>
-      </div>
-
+    <nav className="flex items-center justify-center gap-2 bg-slate-800 pt-2">
       <TabMenu model={tabs}></TabMenu>
     </nav>
   );

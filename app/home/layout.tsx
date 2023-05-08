@@ -1,5 +1,5 @@
 import { PropsWithChildren } from "react";
-import RootTabMenu from "./components/RootTabMenu";
+import { RootTabMenu } from "./components";
 
 export const metadata = {
   title: "Inicio",
