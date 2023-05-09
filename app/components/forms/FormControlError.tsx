@@ -17,14 +17,9 @@ const FormControlError = ({
       id={`${fieldName}-help`}
       className={classNames({ "p-error": invalid })}
     >
-      {error ? DefaultErrorMessages[error.type] : ""}
+      {error?.message}
     </small>
   );
 };
 
 export default FormControlError;
-
-const DefaultErrorMessages: { [key: string]: string } = {
-  required: "Campo requerido.",
-  minLength: "No cumple con la longitud mínima.",
-};

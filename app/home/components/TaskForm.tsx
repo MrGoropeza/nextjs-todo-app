@@ -24,7 +24,13 @@ const TaskForm = () => {
       <Controller
         name="title"
         control={control}
-        rules={{ required: true, minLength: 5 }}
+        rules={{
+          required: { value: true, message: "Campo requerido." },
+          minLength: {
+            value: 5,
+            message: "Debe tener 5 caracteres como mínimo",
+          },
+        }}
         render={({ field, fieldState }) => (
           <FormInputText
             label="Título"
@@ -38,7 +44,7 @@ const TaskForm = () => {
       <Controller
         name="description"
         control={control}
-        rules={{ required: true, min: 0 }}
+        rules={{ required: { value: true, message: "Campo requerido." } }}
         render={({ field, fieldState }) => (
           <FormInputText
             label="Descripción"
