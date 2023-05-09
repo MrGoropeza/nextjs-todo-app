@@ -24,7 +24,7 @@ async function App() {
 
       <TaskList tasks={tasksResponse.tasks} />
 
-      <TaskModal></TaskModal>
+      <TaskModal />
     </>
   );
 }

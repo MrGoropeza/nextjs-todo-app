@@ -33,7 +33,7 @@ const TaskForm = () => {
             fieldState={fieldState}
           />
         )}
-      ></Controller>
+      />
 
       <Controller
         name="description"
@@ -47,7 +47,7 @@ const TaskForm = () => {
             fieldState={fieldState}
           />
         )}
-      ></Controller>
+      />
 
       <div className="mt-2 flex justify-end">
         <Button type="submit" label="Crear" />

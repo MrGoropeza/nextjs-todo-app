@@ -27,7 +27,7 @@ export default function RootTabMenu() {
 
   return (
     <nav className="flex items-center justify-center gap-2 bg-slate-800 pt-2">
-      <TabMenu model={tabs}></TabMenu>
+      <TabMenu model={tabs} />
     </nav>
   );
 }

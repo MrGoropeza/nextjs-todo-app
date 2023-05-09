@@ -16,7 +16,7 @@ const TaskModal = () => {
         visible={dialogOpen}
         onHide={() => setDialogOpen(false)}
       >
-        <TaskForm></TaskForm>
+        <TaskForm />
       </Dialog>
 
       <div className="absolute inset-x-0 bottom-11 mx-auto max-w-max">
@@ -28,7 +28,7 @@ const TaskModal = () => {
           tooltip="Crear Tarea"
           tooltipOptions={{ position: "top" }}
           onClick={() => setDialogOpen(true)}
-        ></Button>
+        />
       </div>
     </>
   );

@@ -23,7 +23,7 @@ export default function TaskTile({
         aria-label="Ver Detalles de Tarea"
         text
         rounded
-      ></Button>
+      />
     </div>
   );
 }
