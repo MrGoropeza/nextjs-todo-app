@@ -2,6 +2,7 @@
 
 import { FormInputText } from "@/app/components";
 import { Button } from "primereact/button";
+import { Dispatch, SetStateAction } from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 
 type Task = {
@@ -9,7 +10,11 @@ type Task = {
   description: string;
 };
 
-const TaskForm = () => {
+interface TaskFormProps {
+  setDialogOpen: Dispatch<SetStateAction<boolean>>;
+}
+
+const TaskForm = ({ setDialogOpen }: TaskFormProps) => {
   const {
     control,
     handleSubmit,
@@ -55,8 +60,20 @@ const TaskForm = () => {
         )}
       />
 
-      <div className="mt-2 flex justify-end">
-        <Button type="submit" label="Crear" />
+      <div className="mt-2 flex justify-end gap-2">
+        <Button
+          type="button"
+          label="Cancelar"
+          severity="danger"
+          icon="pi pi-times"
+          onClick={() => setDialogOpen(false)}
+        />
+        <Button
+          type="submit"
+          label="Crear"
+          severity="success"
+          icon="pi pi-save"
+        />
       </div>
     </form>
   );

@@ -16,7 +16,7 @@ const TaskModal = () => {
         visible={dialogOpen}
         onHide={() => setDialogOpen(false)}
       >
-        <TaskForm />
+        <TaskForm setDialogOpen={setDialogOpen} />
       </Dialog>
 
       <div className="absolute inset-x-0 bottom-11 mx-auto max-w-max">
