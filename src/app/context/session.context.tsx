@@ -22,11 +22,13 @@ const SessionContextProvider = ({ children }: Props) => {
           pb.authStore.save(pb.authStore.token, e.record);
       });
     }
+  }, [user]);
 
+  useEffect(() => {
     return () => {
       pb.realtime.unsubscribe();
     };
-  }, [user]);
+  }, []);
 
   useEffect(() => {
     pb.collection("users")
