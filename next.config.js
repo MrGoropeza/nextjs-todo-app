@@ -2,6 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "mrg-todos.pockethost.io", pathname: "/**" }
+    ]
+  }
 }
 
 module.exports = nextConfig
